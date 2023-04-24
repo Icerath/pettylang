@@ -1,0 +1,14 @@
+[package]
+name = "pettylang"
+version = "0.1.0"
+edition = "2021"
+
+[profile.release]
+lto = "fat"
+strip = true
+
+
+[dependencies]
+compiler = { path = "./pettylang-compiler", package = "pettylang-compiler" }
+parser = { path = "./pettylang-parser", package = "pettylang-parser" }
+vm = { path = "./pettylang-vm", package = "pettylang-vm" }
